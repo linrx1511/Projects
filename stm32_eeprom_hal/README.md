@@ -1,11 +1,11 @@
 
-#基于STM32 HAL库的EEPROM模拟
+# 基于STM32 HAL库的EEPROM模拟
 
 
-###STM32的EEPROM
+### STM32的EEPROM  
 &emsp;&emsp;STM32芯片并没有内置真正的EEPROM,所以储存数据只能通过flash来模拟库来完成，模拟库目的是避免频繁擦写falsh带来的问题，flash一般只有10万次寿命。
 
-###基于hal库的EEPROM库
+### 基于hal库的EEPROM库  
 &emsp;&emsp;ST官方提供了一个简易的EEPROM模拟库，但这个库是基于STD外设库的，现在官方提供的方便的外设代码生成软件是基于HAL的，所以如果你用HAL外设库的话，必须对EEPROM库进行改写。
 &emsp;&emsp;改写也非常简单，只需在eeprom.c增加一小段代码：
 
